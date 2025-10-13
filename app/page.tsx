@@ -20,8 +20,8 @@ export default function Home() {
         </section>
 
         <aside className="hero-right">
-          <div className="hero-image">
-            <Image src="/Hero Picture.png" alt="team around clock" width={700} height={420} />
+          <div className="hero-image ">
+            <Image src="/Hero Picture.png" alt="team around clock" width={900} height={540} />
           </div>
         </aside>
       </div>
@@ -50,7 +50,7 @@ export default function Home() {
 
             <details className="faq-item">
               <summary>
-                <span className="summary-text">What is the 'Weekly Quota'?</span>
+                <span className="summary-text p-3">What is the 'Weekly Quota'?</span>
                 <span className="chev">▾</span>
               </summary>
               <div className="faq-body">It is simply a visual indicator indicate that keeps track of how many full days (out of the minimum 3 days) you have been to the office for the current work week.</div>

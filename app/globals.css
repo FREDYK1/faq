@@ -187,7 +187,7 @@ body {
   max-width: 1160px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 560px;
+  grid-template-columns: 1fr 680px;
   gap: 36px;
   padding: 72px 24px;
   align-items: center;
@@ -253,16 +253,16 @@ body {
 .cta-btn { background: #000; color: #fff; padding: 10px 18px; border-radius: 8px; border: none; }
 
 /* FAQ section */
-.faq-section { padding: 48px 16px; background: #fff; color: #000; }
-.faq-inner { max-width: 1200px; margin: 0 auto; }
-.faq-title { text-align: center; font-size: 40px; margin-bottom: 32px; font-weight: 800; }
-.faq-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.faq-section { padding: 36px 12px; background: #fff; color: #000; }
+.faq-inner { max-width: 1100px; margin: 0 auto; }
+.faq-title { text-align: center; font-size: 38px; margin-bottom: 20px; font-weight: 800; }
+.faq-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
 
 .faq-item summary {
   list-style: none;
   cursor: pointer;
-  padding: 18px 20px;
-  border: 1px solid #cfcfcf;
+  padding: 12px 14px;
+  border: 1px solid #e6e6e6;
   border-radius: 4px;
   font-weight: 600;
   background: #fff;
@@ -271,23 +271,22 @@ body {
   align-items: center;
 }
 .faq-item[open] summary { outline: none; }
-.faq-body { padding: 14px 18px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee; background: #fff; }
+.faq-body { padding: 10px 14px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee; background: #fff; }
 
-/* Chevron circle on the right like Figma */
 .faq-item .chev {
   display: inline-flex;
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #e6e6e6;
   background: #fff;
-  margin-left: 12px;
+  margin-left: 8px;
 }
 .faq-item[open] .chev { transform: rotate(180deg); }
 
 @media (min-width: 900px) {
-  .faq-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .faq-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
   .faq-title { font-size: 56px; }
 }

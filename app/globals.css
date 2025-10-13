@@ -126,10 +126,10 @@ body {
 .header-right { display: flex; gap: 12px; align-items: center; margin-right: 16px; }
 
 .search-wrapper { min-width: 220px; }
-.search-input { width: 100%; padding: 8px 12px; border-radius: 8px; border: none; }
+.search-input { width: 100%; padding: 8px 12px; border-radius: 8px; border-color: #bcbbbb;}
 
 .btn { padding: 8px 12px; border-radius: 8px; cursor: pointer; }
-.btn.ghost { background: rgba(255,255,255,0.7); }
+.btn.ghost { background: #bcbbbb; }
 .btn.solid { background: #000; color: #fff; }
 
 .hamburger { display: none; background: transparent; border: none; font-size: 22px; padding: 8px; }

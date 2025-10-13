@@ -35,7 +35,7 @@ export default function Home() {
             <details className="faq-item">
               <summary>
                 <span className="summary-text">How may days am I required to be in the office?</span>
-                <span className="chev">▾</span>
+                <img src="/dropdown.png" alt="" />
               </summary>
               <div className="faq-body">At least 3 days in a week. Your selected days should be communicated with your lead beforehand.</div>
             </details>
@@ -43,7 +43,7 @@ export default function Home() {
             <details className="faq-item">
               <summary>
                 <span className="summary-text">What happens if I take a sick day or a holiday?</span>
-                <span className="chev">▾</span>
+                <img src="/dropdown.png" alt="" />
               </summary>
               <div className="faq-body">If the sick day/holiday falls on one of your selected office days, your streak will be maintained and will not reset.</div>
             </details>
@@ -51,7 +51,7 @@ export default function Home() {
             <details className="faq-item">
               <summary>
                 <span className="summary-text p-3">What is the 'Weekly Quota'?</span>
-                <span className="chev">▾</span>
+                <img src="/dropdown.png" alt="" />
               </summary>
               <div className="faq-body">It is simply a visual indicator indicate that keeps track of how many full days (out of the minimum 3 days) you have been to the office for the current work week.</div>
             </details>
@@ -59,7 +59,7 @@ export default function Home() {
             <details className="faq-item">
               <summary>
                 <span className="summary-text">Will my streak break if I do not come to the office on my selected day but attend on a different day?</span>
-                <span className="chev">▾</span>
+                <img src="/dropdown.png" alt="" />
               </summary>
               <div className="faq-body">
                 No, your streak will not break but you will be flagged for not getting to the office on time.
@@ -70,7 +70,7 @@ export default function Home() {
             <details className="faq-item">
               <summary>
                 <span className="summary-text">What happens if I spend more than 6 hours and 30 minutes in the office but arrive later than 10:00 AM? Will my streak break?</span>
-                <span className="chev">▾</span>
+                <img src="/dropdown.png" alt="" />
               </summary>
               <div className="faq-body">
                 No, your streak will not break but you will be flagged for not getting to the office on time.
@@ -80,7 +80,7 @@ export default function Home() {
             <details className="faq-item">
               <summary>
                 <span className="summary-text">What happens if I forget to clock in using the logger? Is my day lost?</span>
-                <span className="chev">▾</span>
+                <img src="/dropdown.png" alt="" />
               </summary>
               <div className="faq-body">
                 If you do not clock in with the logger, your data source is solely reliant on he access control but in case the access control is offline, your data for that day might be inaccurate. So we encourage everyone to use the logger once in a while to help keep accurate data.

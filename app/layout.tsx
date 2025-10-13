@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "../components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,33 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header className="site-header">
-          <div className="header-inner">
-            <div className="header-left">
-              <a href="#" className="logo">
-                <img className="logo-icon" src="/FAQ-logo.svg" alt="" />
-                <span className="logo-text">Attendace FAQ</span>
-              </a>
-            </div>
-
-            <nav className="header-center">
-              <a href="#">Home</a>
-              <a href="#">Pricing</a>
-              <a href="#">FAQ</a>
-              <a href="#">Contact</a>
-            </nav>
-
-            <div className="header-right">
-              <div className="search-wrapper">
-                <input className="search-input" placeholder="Search FAQs" aria-label="Search FAQs" />
-              </div>
-              <button className="btn ghost">Login</button>
-              <button className="btn solid">Sign Up</button>
-            </div>
-
-            <button className="hamburger" aria-label="Open menu">☰</button>
-          </div>
-        </header>
+        {/* client header with mobile menu */}
+        <Header />
 
         {children}
 

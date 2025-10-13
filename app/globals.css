@@ -24,3 +24,239 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Footer styles matching provided design */
+.site-footer {
+  position: relative;
+  margin-top: 0;
+  /* full rectangular box with left (green) -> right (black) gradient */
+  background: linear-gradient(90deg, #bfff00 0%, #bfff00 20%, #4f6b00 35%, #111 60%, #0a0a0a 100%);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.65);
+  color: #0b0b0b;
+  border-radius: 0;
+  width: 100%;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  /* align the inner container to the left so the words sit on the left side */
+  margin: 0; /* keep it left-aligned */
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 2px;
+}
+
+.footer-nav a:hover {
+  filter: brightness(0.95) saturate(1.1);
+}
+
+/* Header styles (desktop + mobile) */
+.site-header {
+  background: #bfff00; /* bright neon green */
+  color: #000;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.header-inner {
+  /* make header full-bleed so the logo can stick to the left edge of the viewport */
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0; /* horizontal padding removed so logo sits at the edge */
+  position: relative;
+  justify-content: space-between;
+}
+
+.header-left .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  /* push to far left edge */
+  margin-left: 16px;
+}
+
+.logo-icon {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+.logo-text {
+  font-size: 20px;
+}
+
+.header-center {
+  display: flex;
+  gap: 16px;
+  /* center nav in the viewport */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-center a { text-decoration: none; color: inherit; font-weight: 500; }
+
+.header-right { display: flex; gap: 12px; align-items: center; margin-right: 16px; }
+
+.search-wrapper { min-width: 220px; }
+.search-input { width: 100%; padding: 8px 12px; border-radius: 8px; border: none; }
+
+.btn { padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+.btn.ghost { background: rgba(255,255,255,0.7); }
+.btn.solid { background: #000; color: #fff; }
+
+.hamburger { display: none; background: transparent; border: none; font-size: 22px; padding: 8px; }
+
+/* Mobile layout */
+@media (max-width: 640px) {
+  .header-center, .header-right { display: none; }
+  .hamburger { display: block; margin-left: auto; }
+  .header-inner { padding: 12px 14px; }
+  .logo-text { font-size: 16px; }
+}
+
+/* Hero / landing styles */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 70px); /* leave space for header */
+  background: linear-gradient(180deg, #bfff00 0%, #bfff00 55%, rgba(11,11,11,0.9) 95%);
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 36px;
+  padding: 72px 24px;
+  align-items: center;
+
+}
+
+.hero-left h1 {
+  font-size:100px;
+  line-height: 0.95;
+  margin: 0 0 18px 0;
+  font-weight: 800;
+  color: black;
+}
+
+.hero-lead {
+  max-width: 520px;
+  font-size: 25px;
+}
+
+.hero-right .hero-image { background: #fff; padding: 18px; }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; padding: 48px 18px; }
+  /* reduce the heading on smaller screens */
+  .hero-left h1 { font-size: 90px; }
+  /* ensure the image comes after the text on narrow screens */
+  .hero-right { order: 2; position: relative; z-index: 1; }
+  .hero-lead { font-size: 18px; }
+}
+
+/* Small phones (portrait) tweaks */
+@media (max-width: 480px) {
+  .hero-inner { padding: 32px 16px; gap: 20px; }
+  .hero-right .hero-image { padding: 12px; }
+  .hero-left h1 { font-size: 100px; line-height: 0.98; }
+  .hero-lead { font-size: 18px; }
+  .hero-right .hero-image img { display: block; width: 100%; height: auto; }
+  .hero-left, .hero-lead { text-align: left; }
+}
+
+/* Prevent any overlap: ensure text sits above image when stacking */
+.hero-left { position: relative; z-index: auto; }
+.hero-right { position: relative; z-index: auto; }
+.hero-right .hero-image { width: 100%; box-sizing: border-box; }
+
+/* Ensure FAQ and CTA appear below hero in normal flow */
+.faq-section { position: relative; margin-top: 0; }
+.cta { position: relative; margin-top: 0; }
+
+/* CTA above footer */
+.cta {
+  background: #bfff00;
+  color: #000;
+  text-align: center;
+  padding: 36px 12px;
+  margin-bottom: 0; /* touch footer */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  border-bottom: 2px solid rgba(0,0,0,0.06);
+}
+.cta-inner { max-width: 900px; margin: 0 auto; }
+.cta h2 { font-size: 36px; margin: 0 0 8px 0; }
+.cta p { margin: 0 0 18px 0; }
+.cta-btn { background: #000; color: #fff; padding: 10px 18px; border-radius: 8px; border: none; }
+
+/* FAQ section */
+.faq-section { padding: 48px 16px; background: #fff; color: #000; }
+.faq-inner { max-width: 1200px; margin: 0 auto; }
+.faq-title { text-align: center; font-size: 40px; margin-bottom: 32px; font-weight: 800; }
+.faq-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 20px;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  font-weight: 600;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-item[open] summary { outline: none; }
+.faq-body { padding: 14px 18px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee; background: #fff; }
+
+/* Chevron circle on the right like Figma */
+.faq-item .chev {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  margin-left: 12px;
+}
+.faq-item[open] .chev { transform: rotate(180deg); }
+
+@media (min-width: 900px) {
+  .faq-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .faq-title { font-size: 56px; }
+}
